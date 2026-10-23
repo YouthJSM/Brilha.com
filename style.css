@@ -94,3 +94,21 @@ footer{text-align:center;font-size:.9rem;opacity:.85}
   .contact h2{grid-column:1 / -1;margin-bottom:8px}
   .contact a.btn{margin-bottom:0}
 }
+/* ===== Lesson times ===== */
+.times .days{display:grid;gap:10px}
+.times .day{display:flex;justify-content:space-between;align-items:center;background:var(--btn);color:var(--btnink);border-radius:16px;padding:14px 20px}
+.times .day b{font-family:'Bricolage Grotesque',sans-serif;font-size:1.4rem;font-weight:800}
+.times .day span{font-weight:700;font-size:1.05rem}
+.times .bar{display:flex;flex-direction:column;margin-top:14px;border-radius:16px;overflow:hidden}
+.times .bar>div{padding:14px 20px}
+.times .bar b{display:block;font-size:1.1rem}
+.times .bar .t{background:var(--sun);color:#12200A}
+.times .bar .b{background:var(--soft);color:var(--ink);border-top:3px dashed var(--line)}
+@media (min-width:900px){
+  .times .days{grid-template-columns:repeat(3,1fr)}
+  .times .day{flex-direction:column;justify-content:center;text-align:center;gap:4px;padding:20px}
+  .times .day b{font-size:1.8rem}
+  .times .bar{flex-direction:row}
+  .times .bar .t{flex:2}
+  .times .bar .b{flex:1.5;border-top:0;border-left:3px dashed var(--line)}
+}
